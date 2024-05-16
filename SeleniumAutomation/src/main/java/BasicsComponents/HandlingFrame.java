@@ -20,6 +20,7 @@ public class HandlingFrame {
 		
 		
 		WebElement frame=driver.findElement(By.xpath("//*[@id='mce_0_ifr']"));
+		//We can handle frames by index,By name/id, By webelement.Here we use webelement in the bracket of frame//
 		driver.switchTo().frame(frame);
 		driver.findElement(By.xpath("//*[@id='tinymce']")).sendKeys("Hi Nitheesha");
 		System.out.println(driver.findElement(By.xpath("//*[@id='tinymce']")).getText());
@@ -27,7 +28,7 @@ public class HandlingFrame {
 		//come outside of frame
 		driver.switchTo().defaultContent();
 		System.out.println(tittle.getText());
-		driver.quit();
+		//driver.quit();
 
 	}
 
